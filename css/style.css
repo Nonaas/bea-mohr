@@ -1,8 +1,17 @@
 /* fonts import */
-@import url("../fonts/OpenSans.ttf");
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LTHumor';
+  src: url('../fonts/LTHumor-Regular.ttf') format('truetype');
+}
 
 body {
-  font-family: "Open Sans";
+  font-family: 'OpenSans', 'Calibri';
   color: #222222;
   background-color: #DBF2D5;
   overflow-x: hidden;
@@ -171,6 +180,10 @@ a:focus {
   padding: 5px 0;
 }
 
+.navbar-toggler {
+  margin-right: 30px;
+}
+
 .custom_nav-container .navbar-toggler {
   outline: none;
 }
@@ -261,9 +274,18 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background-color: #ffffff;
+  background-color: #ffffffe5;
   border-radius: 20px;
+  width: 30vw;
 }
+@media (max-width: 1520px) {
+  .slider_section {
+    width: 90vw;
+  }
+}
+
+
+
 
 .slider_section .row {
   -webkit-box-align: center;
@@ -278,6 +300,16 @@ a:focus {
 
 .slider_section .detail-box {
   color: #000000;
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .detail-box h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  .detail-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 }
 
 .slider_section .detail-box h1 {
@@ -367,7 +399,7 @@ a:focus {
 
 .guidance_section .box {
   margin-top: 45px;
-  background-color: #f7fafa;
+  background-color: #f7fafad4;
   padding: 25px;
   border-radius: 10px;
 }
@@ -608,7 +640,7 @@ a:focus {
 
 .contact_section {
   position: relative;
-  background-color: #f9fafa;
+  background-color: #ffffffe5;
   padding-top: 75px;
   padding-bottom: 75px;
   border-radius: 10px;
@@ -696,7 +728,7 @@ a:focus {
 }
 
 .info_section {
-  background-color: #B86A19;
+  background-color: #c38f36;
   color: #ffffff;
   padding-top: 45px;
   padding-bottom: 45px;
