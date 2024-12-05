@@ -30,61 +30,72 @@
 </head>
 
 <body>
+  <!-- header section starts -->
+  <header class="header_section long_section px-0 fixed-top">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" href="index.html">
+        <span>
+          Bea Mohr
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Startseite<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ueber-mich.html">Über mich</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="psychologische-beratung.html">Psychologische Beratung</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="beratung-zur-persoenlichkeitsentwicklung.html">Beratung zur Persönlichkeitsentwicklung</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="angebot.html">Angebot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end header section -->
 
   <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section long_section px-0">
-      <nav class="navbar navbar-expand-lg custom_nav-container ">
-        <a class="navbar-brand" href="index.html">
-          <span>
-            Bea Mohr
-          </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class=""> </span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Startseite<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ueber-mich.html">Über mich</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="psychologische-beratung.html">Psychologische Beratung</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="beratung-zur-persoenlichkeitsentwicklung.html">Beratung zur Persönlichkeitsentwicklung</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="angebot.html">Angebot</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="kontakt.html">Kontakt</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- end header section -->
 
     <!-- Slider Section -->
-    <section class="slider_section long_section">
+    <section class="slider_section long_section" style="padding: 60px 20px;">
       <div class="container">
         <div class="row align-items-stretch">
+
+          <!-- Static Logo Section -->
+          <div class="col-lg-6 col-md-12 text-center d-flex flex-column justify-content-center mt-4 mt-lg-0">
+            <div class="logo-box px-3">
+              <img src="images/background.png" alt="Logo" class="img-fluid w-100" style="max-height: 300px; object-fit: contain;">
+              <h3 id="text-shadow" class="mt-3 fs-4" style="font-size: 2rem; font-weight: bold; color: #6d8762">
+                DEINE Wegbegleiterin
+              </h3>
+            </div>
+          </div>
+
           <!-- Carousel Section -->
-          <div class="col-lg-6 col-md-6 mb-3 mb-md-0 d-flex">
-            <div id="customCarousel" class="carousel slide w-100" data-ride="carousel">
-              <div class="carousel-inner h-100">
+          <div class="col-lg-6 col-md-12 mb-3 mb-md-0 d-flex flex-column" style="justify-content: flex-end;">
+            <div id="customCarousel" class="carousel slide w-100" data-ride="carousel" style="min-height: 300px;">
+              <div class="carousel-inner h-100" style="min-height: 275px;">
                 <!-- Slide 1 -->
                 <div class="carousel-item active h-100">
-                  <div class="d-flex flex-column justify-content-center h-100">
+                  <div class="d-flex flex-column justify-content-center h-100 px-3">
                     <div class="detail-box text-center">
-                      <h1 class="display-4 text-break">
+                      <h1 class="display-5 text-break">
                         Psychologische Beratung
                       </h1>
                       <p class="lead">
@@ -95,11 +106,10 @@
                 </div>
                 <!-- Slide 2 -->
                 <div class="carousel-item h-100">
-                  <div class="d-flex flex-column justify-content-center h-100">
+                  <div class="d-flex flex-column justify-content-center h-100 px-3">
                     <div class="detail-box text-center">
-                      <h1 class="display-4 text-break">
-                        Ganzheitliche Persönlichkeits-
-                        analyse
+                      <h1 class="display-5 text-break">
+                        Ganzheitliche Persönlichkeitsanalyse
                       </h1>
                       <p class="lead">
                         Entdecken Sie Ihre Stärken und Potenziale für ein erfülltes Leben.
@@ -109,9 +119,9 @@
                 </div>
                 <!-- Slide 3 -->
                 <div class="carousel-item h-100">
-                  <div class="d-flex flex-column justify-content-center h-100">
+                  <div class="d-flex flex-column justify-content-center h-100 px-3">
                     <div class="detail-box text-center">
-                      <h1 class="display-4 text-break">
+                      <h1 class="display-5 text-break">
                         Meditation und Achtsamkeit
                       </h1>
                       <p class="lead">
@@ -121,7 +131,6 @@
                   </div>
                 </div>
               </div>
-
               <!-- Indicators -->
               <ol class="carousel-indicators">
                 <li data-target="#customCarousel" data-slide-to="0" class="active"></li>
@@ -130,26 +139,17 @@
               </ol>
             </div>
           </div>
-
-          <!-- Static Logo Section -->
-          <div class="col-lg-6 col-md-6 text-center d-flex flex-column justify-content-center">
-            <div class="logo-box">
-              <img src="images/background.png" alt="Logo" class="img-fluid w-100">
-              <h3>DEINE Wegbegleiterin</h3>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
+    </section>    
     <!-- end slider section -->
-
   </div>
 
 
   <!-- guidance section -->
   <section class="guidance_section layout_padding">
     <div class="container">
-      <div class="heading_container">
+      <div class="heading_container text-center">
         <h2>
           Orientierung im Leben finden
         </h2>
@@ -157,80 +157,80 @@
           Entdecken Sie Wege, um die Herausforderungen des Lebens zu meistern.
         </p>
       </div>
-      <div class="row">
+      <div class="row gy-5 gx-4">
         <!-- Question 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/question.png" alt="Finding Orientation" class="img-fluid">
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+          <div id="box-shadow" class="box text-center d-flex flex-column" style="max-height: -webkit-fill-available; max-width: -webkit-fill-available">
+            <div class="img-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <img src="images/question.png" alt="Finding Orientation" class="img-fluid" style="max-height: 150px;">
             </div>
-            <div class="detail-box">
-              <h5>
+            <div class="detail-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <h5 style="font-size: 1.5rem; font-weight: bold;">
                 WIE finde ich Orientierung in schweren Zeiten und Krisen?
               </h5>
             </div>
           </div>
         </div>
         <!-- Question 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/question.png" alt="Finding Meaning" class="img-fluid">
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+          <div id="box-shadow" class="box text-center d-flex flex-column" style="max-height: -webkit-fill-available; max-width: -webkit-fill-available">
+            <div class="img-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <img src="images/question.png" alt="Improving Relationships" class="img-fluid" style="max-height: 150px;">
             </div>
-            <div class="detail-box">
-              <h5>
-                WIE kann ich Sinn im Leben finden?
+            <div class="detail-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <h5 style="font-size: 1.5rem; font-weight: bold;">
+                WIE kann ich meine Beziehungsfähigkeit verbessern?
               </h5>
             </div>
           </div>
         </div>
         <!-- Question 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/question.png" alt="Facing Fears" class="img-fluid">
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+          <div id="box-shadow" class="box text-center d-flex flex-column" style="max-height: -webkit-fill-available; max-width: -webkit-fill-available">
+            <div class="img-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <img src="images/question.png" alt="Facing Fears" class="img-fluid" style="max-height: 150px;">
             </div>
-            <div class="detail-box">
-              <h5>
+            <div class="detail-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <h5 style="font-size: 1.5rem; font-weight: bold;">
                 WIE kann ich Ängsten begegnen und mein Vertrauen stärken?
               </h5>
             </div>
           </div>
         </div>
         <!-- Question 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/question.png" alt="Improving Relationships" class="img-fluid">
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+          <div id="box-shadow" class="box text-center d-flex flex-column" style="max-height: -webkit-fill-available; max-width: -webkit-fill-available">
+            <div class="img-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <img src="images/question.png" alt="Successful Communication" class="img-fluid" style="max-height: 150px;">
             </div>
-            <div class="detail-box">
-              <h5>
-                WIE kann ich meine Beziehungsfähigkeit verbessern?
-              </h5>
-            </div>
-          </div>
-        </div>
-        <!-- Question 5 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/question.png" alt="Successful Communication" class="img-fluid">
-            </div>
-            <div class="detail-box">
-              <h5>
+            <div class="detail-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <h5 style="font-size: 1.5rem; font-weight: bold;">
                 WIE kann Kommunikation gelingen?
               </h5>
             </div>
           </div>
         </div>
-        <!-- Question 6 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/question.png" alt="Unleashing Potential" class="img-fluid">
+        <!-- Question 5 -->
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+          <div id="box-shadow" class="box text-center d-flex flex-column" style="max-height: -webkit-fill-available; max-width: -webkit-fill-available">
+            <div class="img-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <img src="images/question.png" alt="Finding Meaning" class="img-fluid" style="max-height: 150px;">
             </div>
-            <div class="detail-box">
-              <h5>
+            <div class="detail-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <h5 style="font-size: 1.5rem; font-weight: bold;">
+                WIE kann ich Sinn im Leben finden?
+              </h5>
+            </div>
+          </div>
+        </div>
+        <!-- Question 6 -->
+        <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+          <div id="box-shadow" class="box text-center d-flex flex-column" style="max-height: -webkit-fill-available; max-width: -webkit-fill-available">
+            <div class="img-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <img src="images/question.png" alt="Unleashing Potential" class="img-fluid" style="max-height: 150px;">
+            </div>
+            <div class="detail-box flex-grow-1 d-flex align-items-center justify-content-center">
+              <h5 style="font-size: 1.5rem; font-weight: bold;">
                 WIE kann ich mein Potential entfalten?
               </h5>
             </div>
@@ -241,76 +241,67 @@
   </section>
   <!-- end guidance section -->
 
-  <!-- contact section -->
-  
-  <!-- end contact section -->
 
-  <!-- footer section -->
-  <section class="info_section long_section">
-    <div class="container">
-      <div class="contact_nav">
-        <a href="">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          <span>
-            Telefon: 123455678990
-          </span>
-        </a>
-        <a href="">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <span>
-            Email: kontakt@bea-mohr.de
-          </span>
-        </a>
-      </div>
+  <!-- Footer Section -->
+<section class="info_section long_section">
+  <div class="container">
+    <!-- Contact Info -->
+    <div class="contact_nav text-center mb-4">
+      <a href="" class="d-block">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <span>Telefon: 123455678990</span>
+      </a>
+      <a href="" class="d-block">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <span>Email: kontakt@bea-mohr.de</span>
+      </a>
+    </div>
 
-      <div class="info_top">
-        <div class="row">
-          <!-- Navigation Links -->
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="info_links">
-              <h4>Navigation</h4>
-              <div class="info_links_menu">
-                <a class="" href="index.html">Start<span class="sr-only">(current)</span></a>
-                <a class="" href="ueber-mich.html">Über mich</a>
-                <a class="" href="psychologische-beratung.html">Psychologische Beratung</a>
-                <a class="" href="beratung-zur-persoenlichkeitsentwicklung.html">Beratung zur Persönlichkeitsentwicklung</a>
-                <a class="" href="angebot.html">Angebot</a>
-                <a class="" href="kontakt.html">Kontakt</a>
-              </div>
+    <!-- Info Top Section -->
+    <div class="info_top">
+      <div class="row justify-content-center">
+        <!-- Navigation Links -->
+        <div class="row justify-content-center">
+          <div class="info_links">
+            <h4>Navigation</h4>
+            <div class="info_links_menu">
+              <a href="index.html">Start<span class="sr-only">(current)</span></a>
+              <a href="ueber-mich.html">Über mich</a>
+              <a href="psychologische-beratung.html">Psychologische Beratung</a>
+              <a href="beratung-zur-persoenlichkeitsentwicklung.html">Beratung zur Persönlichkeitsentwicklung</a>
+              <a href="angebot.html">Angebot</a>
+              <a href="kontakt.html">Kontakt</a>
             </div>
           </div>
+        </div>
 
-          <!-- Instagram Embed Section -->
-          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <div class="info_post">
-              <!-- Instagram Embed -->
-              <div class="embed-responsive embed-responsive-1by1">
-                <iframe 
-                  class="embed-responsive-item"
-                  src="https://www.instagram.com/bemore_80/embed/" 
-                  allowfullscreen 
-                  frameborder="0"
-                  scrolling="no">
-                </iframe>
-              </div>
+        <!-- Instagram Embed Section -->
+        <div class="col-sm-6 col-md-4 col-lg-3 text-center">
+          <div class="info_post">
+            <h4>Folgen Sie mir</h4>
+            <div id="box-shadow" class="embed-responsive embed-responsive-1by1 rounded-lg">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.instagram.com/bemore_80/embed/"
+                allowfullscreen
+                frameborder="0"
+                scrolling="no">
+              </iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- end info_section -->
+  </div>
+</section>
 
+<!-- Footer Section -->
+<footer class="footer_section text-center mt-4">
+  <div class="container">
+    <p>&copy; Bea Mohr 2024</p>
+  </div>
+</footer>
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; Bea Mohr 2024
-      </p>
-    </div>
-  </footer>
-  <!-- end footer section -->
 
 
 
