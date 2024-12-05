@@ -6,15 +6,37 @@ body {
   color: #222222;
   background-color: #DBF2D5;
   overflow-x: hidden;
+  position: relative; /* Positioning pseudo-element for blur effect */
+  padding-top: 80px; /* Additional padding for fixed topbar */
+}
 
-
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("/bea-mohr/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
   background-position: center;
+  filter: blur(2.5px); /* Blur Effect */
+  z-index: -1;
 }
 
+#box-shadow{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+#text-shadow{
+    text-shadow:
+    -0.15px -0.15px 0 #000,
+    0.15px -0.15px 0 #000,
+    -0.15px 0.15px 0 #000,
+    0.15px 0.15px 0 #000;  
+}
 
 
 .layout_padding {
@@ -69,7 +91,7 @@ body {
 
 /*header section*/
 .hero_area {
-  min-height: 100vh;
+  min-height: 65vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +108,12 @@ body {
 
 .header_section {
   background-color: #DBF2D5;
+  position: fixed; /* This makes the header fixed to the top */
+  top: 0;          /* Ensure it stays at the top of the page */
+  left: 0;
+  right: 0;
+  width: 100%;     /* Make sure the header takes the full width */
+  z-index: 1000;   /* Ensure the header stays above other content */
 }
 
 .header_section .container-fluid {
@@ -319,7 +347,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 45px;
+  margin-top: 0px;
 }
 
 .slider_section .carousel-indicators li {
@@ -368,7 +396,7 @@ a:focus {
 
 .guidance_section .box .detail-box h5 {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .guidance_section .box .detail-box .price_box {
@@ -442,7 +470,6 @@ a:focus {
 }
 
 .blog_section .box {
-  margin-top: 55px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
@@ -465,7 +492,7 @@ a:focus {
 }
 
 .blog_section .box .detail-box p {
-  font-size: 15px;
+  font-size: 20px;
   color: #444;
 }
 
