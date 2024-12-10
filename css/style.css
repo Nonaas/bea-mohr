@@ -63,6 +63,25 @@ body::before {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* swal Notification style */
+.swal2-actions{
+  width: 100%;
+}
+.confirm-button-class {
+  border: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 55px;
+  background-color: #6bb7be;
+  color: #ffffff;
+  border-radius: 0px;
+  border: 1px solid #6bb7be;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.confirm-button-class:focus {outline: none;}
+
+
 
 
 .layout_padding {
