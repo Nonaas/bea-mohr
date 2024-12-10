@@ -148,9 +148,22 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 380px) {
   .slider_section .detail-box h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  header > nav > a > img {
+    max-width: 75px !important;
+  }
+}
+
+@media (max-width: 357px) {
+  header > nav > a > span {
+    font-size: 1.2rem !important;
+  }
+  header > nav > a > img {
+    max-width: 50px !important;
   }
 }
 
