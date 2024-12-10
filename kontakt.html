@@ -27,6 +27,9 @@
 
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Link to SweetAlert2 CSS -->
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
 </head>
 
 <body>
@@ -45,7 +48,7 @@
       <div class="row" style="place-content: center;">
         <div id="box-shadow" class="col-md-6 rounded-lg p-4" style="background-color: #f7f7f7;">
           <div class="form_container">
-            <form action="" method="POST">
+            <form id="contact-form" action="" method="POST" onsubmit="showSuccessMessage()">
               <div>
                 <label for="name-input">
                   Vor- und Nachname <span style="color: red;">*</span>
@@ -56,7 +59,7 @@
                 <label for="phone-input">
                   Telefonnummer <span style="color: red;">*</span><span style="font-size: 0.9em; color: gray;"> (entweder Telefonnummer oder Email)</span>
                 </label>
-                <input type="tel" name="phone" id="phone-input" />
+                <input type="tel" name="phone" id="phone-input" onkeyup="this.value = this.value.replace(/[^0-9+\- ]/g, '');" />
               </div>
               <div>
                 <label for="email-input">
@@ -81,6 +84,9 @@
                 </label>
               </div>
               <div class="btn_box pt-2">
+                <label>
+                  <span style="color: red;">*</span><span style="font-size: 0.9em; color: gray;"> Pflichtfelder</span>
+                </label>
                 <button type="submit" class="w-100">
                   Senden
                 </button>
@@ -101,6 +107,8 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
+  <!-- sweetalert js -->
+  <script src="js/sweetalert2.min.js"></script>
   <!-- js -->
   <script src="js/include.js"></script>
   <script src="js/contact.js"></script>
