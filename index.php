@@ -30,49 +30,11 @@
 </head>
 
 <body>
-  <!-- header section starts -->
-  <header class="header_section px-0 fixed-top">
-    <nav class="navbar navbar-expand-lg custom_nav-container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/background.png" alt="Logo" 
-          class="img-fluid w-100" 
-          style="max-height: 100px; max-width: 100px; object-fit: scale-down;">
-        <span style="font-family: LTHumor; word-spacing: 10px;font-size: 2rem; ">
-          Beatrice Mohr
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""> </span>
-      </button>
+  
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Startseite<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ueber-mich.html">Über mich</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="psychologische-beratung.html">Psychologische Beratung</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="beratung-zur-persoenlichkeitsentwicklung.html">Beratung zur Persönlichkeitsentwicklung</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="angebot.html">Angebot</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kontakt.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- end header section -->
+  <?php include 'header.php'; ?>
 
+  
   <div class="hero_area w-100 d-flex justify-content-center" style="align-items: center;">
     <!-- Slider Section -->
     <section class="slider_section long_section p-3 row justify-content-center" style="max-height: fit-content;">
@@ -244,67 +206,9 @@
   <!-- end guidance section -->
 
 
-  <!-- Footer Section -->
-  <section class="info_section">
-    <div class="container">
-      <!-- Contact Info -->
-      <div class="contact_nav text-center mb-4">
-        <a href="" class="d-block">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          <span>Telefon: 123455678990</span>
-        </a>
-        <a href="" class="d-block">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <span>Email: kontakt@bea-mohr.de</span>
-        </a>
-      </div>
+  <?php include 'footer.php'; ?>
 
-      <!-- Info Top Section -->
-      <div class="info_top">
-        <div class="row justify-content-center">
-          <!-- Navigation Links -->
-          <div class="row justify-content-center">
-            <div class="info_links">
-              <h4>Navigation</h4>
-              <div class="info_links_menu">
-                <a href="index.html">Start</a>
-                <a href="ueber-mich.html">Über mich</a>
-                <a href="psychologische-beratung.html">Psychologische Beratung</a>
-                <a href="beratung-zur-persoenlichkeitsentwicklung.html">Beratung zur Persönlichkeitsentwicklung</a>
-                <a href="angebot.html">Angebot</a>
-                <a href="kontakt.html">Kontakt</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Instagram Embed Section -->
-          <div class="col-sm-6 col-md-4 col-lg-3 text-center">
-            <div class="info_post">
-              <h4>Folgen Sie mir</h4>
-              <div id="box-shadow" class="embed-responsive embed-responsive-1by1 rounded-lg">
-                <iframe
-                  class="embed-responsive-item"
-                  src="https://www.instagram.com/bemore_80/embed/"
-                  allowfullscreen
-                  frameborder="0"
-                  scrolling="no">
-                </iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="footer_section text-center mt-4">
-    <div class="container">
-      <p>&copy; Bea Mohr 2024</p>
-    </div>
-  </footer>
-
-
+  
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
 
