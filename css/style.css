@@ -81,6 +81,12 @@ body::before {
 }
 .confirm-button-class:focus {outline: none;}
 
+#ds-link{
+  color:#6bb7be; 
+  background-color:unset; 
+  border:unset; 
+  padding:unset;
+}
 
 
 
