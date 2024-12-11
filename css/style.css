@@ -86,6 +86,7 @@ body::before {
   background-color:unset; 
   border:unset; 
   padding:unset;
+  overflow-wrap: anywhere;
 }
 
 
