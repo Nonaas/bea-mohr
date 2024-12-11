@@ -403,6 +403,15 @@ a:focus {
   color: #6bb7be;
 }
 
+.hover-box {
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  transform: scale(0.95); /* Initial scale */
+}
+
+.hover-box:hover {
+  transform: scale(1); /* Scale up on hover */
+}
+
 .slider_section .img-box img {
   width: 100%;
 }
@@ -450,8 +459,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 275px;
-  padding: 25px;
+  height: 180px;
 }
 
 .guidance_section .box .img-box img {
