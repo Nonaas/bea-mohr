@@ -92,7 +92,7 @@ body::before {
 
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 55px 0;
 }
 
 .layout_padding2 {
@@ -696,7 +696,7 @@ a:focus {
 .contact_section {
   position: relative;
   background-color: #ffffffe5;
-  padding-top: 75px;
+  padding-top: 55px;
   padding-bottom: 75px;
   border-radius: 10px;
 }
