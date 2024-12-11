@@ -120,8 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error(error);
           placeholder.innerHTML = `<p>Failed to load content from ${filePath}.</p>`;
         });
-    } else {
-      console.warn(`Placeholder with ID "${placeholderId}" not found.`);
     }
   };
 
