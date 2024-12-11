@@ -7,10 +7,10 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: *
-Disallow: /
+# User-agent: *
+# Disallow: /
 
-Sitemap: sitemap.xml
+# Sitemap: sitemap.xml
 
-User-agent: *
-Crawl-delay: 10
+# User-agent: *
+# Crawl-delay: 10
