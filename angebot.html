@@ -45,10 +45,10 @@
 
 <body>
 
+  <div id="header-placeholder"></div>
 
-<div id="header-placeholder"></div>
+  <div id="cookie-banner-placeholder"></div>
 
-<div id="cookie-banner-placeholder"></div>
 
   <!-- blog section -->
   <section class="slider_section blog_section layout_padding w-100 d-flex justify-content-center" style="align-items: center;">
@@ -56,49 +56,59 @@
       <div class="heading_container pb-4">
         <h2 style="font-size: 3rem; font-family: LTHumor; word-spacing: 20px;">Angebot</h2>
       </div>
-      <div class="row align-items-stretch m-lg">
-
-        <!-- First Angebot Box -->
-        <div class="col-md-6 col-lg-4 mx-auto p-auto">
-          <div class="hover-box box d-flex flex-column h-100 rounded-lg">
-            <div class="img-box">
-              <img src="images/icons/erstgespraech.png" alt="Erstgespräch" class="img-fluid" style="max-height: 200px; object-fit: contain;">
-            </div>
-            <div class="detail-box d-flex flex-column flex-grow-1">
-              <h5>Kostenloses Erstgespräch</h5>
-              <p class="text-justify">
-                Ein ca. 15-minütiges telefonisches Erstgespräch, in dem wir uns kurz kennenlernen und Ihr Thema anreißen. Wir können klären, ob wir uns sympathisch sind, das Thema zu mir passt und ob wir uns vorstellen können, zusammenzuarbeiten.
-              </p>
-            </div>
+      <div class="row">
+        <!-- Image on the Left -->
+        <div class="col-md-6">
+          <div id="box-shadow" class="img-box">
+            <!-- Use Bootstrap class 'img-fluid' for responsive image -->
+            <img src="images/photos/raum.jpeg" alt="Räumlichkeiten Bild" class="img-fluid rounded" style="max-height: 660px; object-fit: cover; width: 100%;">
           </div>
         </div>
 
-        <!-- Second Angebot Box -->
-        <div class="col-md-6 col-lg-4 mx-auto p-auto">
-          <div class="hover-box box d-flex flex-column h-100 rounded-lg">
-            <div class="img-box">
-              <img src="images/icons/beratungssitzung.png" alt="Beratungssitzung" class="img-fluid" style="max-height: 200px; object-fit: contain;">
-            </div>
-            <div class="detail-box d-flex flex-column flex-grow-1">
-              <h5>Beratungssitzung (60 Min.)</h5>
-              <p class="text-justify">
-                Eine Beratungssitzung (60 Minuten) kostet 60,-. Hierbei werden wir auf Ihr Thema eingehen und Lösungsansätze sowie Empfehlungen erarbeiten.
-              </p>
+        <!-- Angebot Boxes on the Right -->
+        <div class="col-md-6">
+          <!-- First Angebot Box -->
+          <div class="row-md-6 row-lg-4 mx-auto p-auto">
+            <div class="hover-box box d-flex flex-row h-100 rounded-lg">
+              <div class="img-box p-2">
+                <img src="images/icons/erstgespraech.png" alt="Erstgespräch" class="h-100 img-fluid" style="object-fit: contain;">
+              </div>
+              <div class="detail-box p-3 d-flex flex-column flex-grow-1" style="max-width: 390px;">
+                <h5>Kostenloses Erstgespräch</h5>
+                <p class="text-justify m-0">
+                  Ein ca. 15-minütiges telefonisches Erstgespräch, in dem wir uns kurz kennenlernen und Ihr Thema anreißen. Wir können klären, ob wir uns sympathisch sind, das Thema zu mir passt und ob wir uns vorstellen können, zusammenzuarbeiten.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Third Angebot Box -->
-        <div class="col-md-6 col-lg-4 mx-auto p-auto">
-          <div class="hover-box box d-flex flex-column h-100 rounded-lg">
-            <div class="img-box">
-              <img src="images/icons/meditationsgruppe.png" alt="Meditationsgruppe" class="img-fluid" style="max-height: 200px; object-fit: contain;">
+          <!-- Second Angebot Box -->
+          <div class="row-md-6 row-lg-4 mx-auto p-auto">
+            <div class="hover-box box d-flex flex-row h-100 rounded-lg">
+              <div class="img-box p-2">
+                <img src="images/icons/beratungssitzung.png" alt="Beratungssitzung" class="h-100 img-fluid" style="object-fit: contain;">
+              </div>
+              <div class="detail-box p-3 d-flex flex-column flex-grow-1" style="max-width: 390px;">
+                <h5>Beratungssitzung (60 Min.)</h5>
+                <p class="text-justify m-0">
+                  Eine Beratungssitzung (60 Minuten) kostet 60,-. Hierbei werden wir auf Ihr Thema eingehen und Lösungsansätze sowie Empfehlungen erarbeiten.
+                </p>
+              </div>
             </div>
-            <div class="detail-box d-flex flex-column flex-grow-1">
-              <h5>Regelmäßige Kurse & Themenabende</h5>
-              <p class="text-justify">
-                Über das Jahr verteilt finden regelmäßige Meditations- und Achtsamkeitskurse statt. Diese werde ich immer gesondert bewerben. Ebenso biete ich Themenabende an.
-              </p>
+          </div>
+
+          <!-- Third Angebot Box -->
+          <div class="row-md-6 row-lg-4 mx-auto p-auto">
+            <div class="hover-box box d-flex flex-row h-100 rounded-lg">
+              <div class="img-box p-2">
+                <img src="images/icons/meditationsgruppe.png" alt="Meditationsgruppe" class="h-100 img-fluid" style="object-fit: contain;">
+              </div>
+              <div class="detail-box p-3 d-flex flex-column flex-grow-1" style="max-width: 390px;">
+                <h5>Regelmäßige Kurse & Themenabende</h5>
+                <p class="text-justify m-0">
+                  Über das Jahr verteilt finden regelmäßige Meditations- und Achtsamkeitskurse statt. Diese werde ich immer gesondert bewerben. Ebenso biete ich Themenabende an.
+                </p>
+              </div>
             </div>
           </div>
         </div>
