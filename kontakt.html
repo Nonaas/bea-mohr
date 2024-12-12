@@ -62,33 +62,33 @@
       <div class="row" style="place-content: center;">
         <div id="box-shadow" class="col-md-6 rounded-lg p-4" style="background-color: #f7f7f7;">
           <div class="form_container">
-            <form id="contact-form" method="POST">
+            <form onsubmit="submitForm(event)">
               <div>
                 <label for="name-input">
                   Vor- und Nachname <span style="color: red;">*</span>
                 </label>
-                <input type="text" name="Name" id="name-input" required />
+                <input type="text" name="name" id="name-input" required />
               </div>
               <div>
                 <label for="phone-input">
                   Telefonnummer <span style="color: red;">*</span><span style="font-size: 0.9em; color: gray;"> (entweder Telefonnummer oder Email)</span>
                 </label>
-                <input type="tel" name="Telefonnummer" id="phone-input" onkeyup="this.value = this.value.replace(/[^0-9+\- ]/g, '');" />
+                <input type="tel" name="tel" id="phone-input" required onkeyup="this.value = this.value.replace(/[^0-9+\- ]/g, '');" />
               </div>
               <div>
                 <label for="email-input">
                   Email <span style="color: red;">*</span><span style="font-size: 0.9em; color: gray;"> (entweder Telefonnummer oder Email)</span>
                 </label>
-                <input type="email" name="Email" id="email-input" />
+                <input type="email" name="email" id="email-input" required />
               </div>
               <div>
                 <label for="message-input">
                   Nachricht <span style="color: red;">*</span>
                 </label>
-                <textarea  name="Nachricht" id="message-input" class="message-box" required></textarea>
+                <textarea name="message" id="message-input" class="message-box" required></textarea>
               </div>
               <div class="d-flex align-items-center mb-3">
-                <input type="checkbox" name="Datenschutz" id="ds-checkbox" class="w-25 mr-2 mb-0" style="max-width: 35px;" value="akzeptiert" required>
+                <input type="checkbox" name="ds-compliance" id="ds-checkbox" class="w-25 mr-2 mb-0" style="max-width: 35px;" value="akzeptiert" required>
                 <label for="ds-checkbox" class="mb-0">
                   <span style="color: red;">* </span>
                   Ich habe die 
@@ -96,12 +96,7 @@
                   gelesen und bin damit einverstanden.
                 </label>
               </div>
-              <input type="hidden" name="_next" value="http://localhost/bea-mohr/kontakt.html">
-              <input type="hidden" name="_replyto">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_subject" value="bea-mohr.de | Kontaktanfrage">
-              <input type="text" name="_honey" style="display:none">
-              <input type="hidden" name="_captcha" value="false">
+
               <div class="btn_box pt-2">
                 <label>
                   <span style="color: red;">*</span><span style="font-size: 0.9em; color: gray;"> Pflichtfelder</span>

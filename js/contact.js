@@ -1,21 +1,26 @@
-const phoneInput = document.getElementById("phone-input");
-const emailInput = document.getElementById("email-input");
+// Get dynamic mandatory fields
+const phoneInput = $("#phone-input");
+const emailInput = $("#email-input");
 
-const toggleRequiredAttributes = () => {
-if (phoneInput.value.trim() || emailInput.value.trim()) {
-    phoneInput.removeAttribute("required");
-    emailInput.removeAttribute("required");
-} else {
-    phoneInput.setAttribute("required", "true");
-    emailInput.setAttribute("required", "true");
-}
+
+function toggleRequiredAttributes() {
+  if (phoneInput.val() || emailInput.val()) {
+    // Remove required
+    phoneInput.removeAttr("required");
+    emailInput.removeAttr("required");
+  } else {
+    // Add required
+    phoneInput.attr("required", "true");
+    emailInput.attr("required", "true");
+  }
 };
 
-phoneInput.addEventListener("input", toggleRequiredAttributes);
-emailInput.addEventListener("input", toggleRequiredAttributes);
+// Attach event listeners
+phoneInput.on("input", toggleRequiredAttributes);
+emailInput.on("input", toggleRequiredAttributes);
 
-// Run the toggle function on page load to handle default states
-toggleRequiredAttributes();
+
+
 
 function showSuccessMessage() {
     let timerInterval;
@@ -33,43 +38,52 @@ function showSuccessMessage() {
         }
     })
 }
-
-// Logic for submitting contact form
-var form = document.getElementById("contact-form");
-form.addEventListener('submit', function (event) {
-    // Prevent default submission
-    event.preventDefault(); 
-
-    showSuccessMessage();
-
-    // Get data
-    var formData = new FormData(form);
-    var dataObject = {};
-    formData.forEach((value, key) => {
-        dataObject[key] = value;
-    });
-
-    // Send data as JSON to AJAX endpoint
-    fetch("https://formsubmit.co/ajax/wahle.jonas@web.de", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+function showErrorMessage(error) {
+    Swal.fire({
+        customClass: {
+            confirmButton: 'confirm-button-class',
         },
-        body: JSON.stringify(dataObject), // Convert to JSON
-    })
-    .then(response => response.json()) // Parse JSON
-    .then(data => {
-        if (data.success) {
-            form.reset(); // Reset form
-        } else {
-            console.error("Submission-Error:", data);
-            alert("Etwas ist schief gelaufen :-(\n\nBitte versuchen sie es erneut.");
-        }
-    })
-    .catch(error => {
-        console.error("Fetch-Error:", error);
-        alert("Etwas ist schief gelaufen :-(\n\nBitte versuchen sie es erneut.");
+        confirmButtonText: "Erneut versuchen",
+        showCancelButton: true,
+        cancelButtonText: "Zurück",
+        icon: "error",
+        title: "Oops...",
+        text: "Etwas ist schief gelaufen :-(\r\n("+error+")\r\n\r\nBitte versuchen sie es erneut.",
+        footer: '<i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:kontakt@bea-mohr.de" target="_blank">Stattdessen eine Email schreiben?</a>'
     });
-});
+}
 
+async function submitForm(event) {
+    event.preventDefault();
+
+    const formData = Object.fromEntries(new FormData(event.target).entries());
+
+    try {
+        const response = 
+        await fetch("https://www.form-to-email.com/api/s/3dYkLBl8TpIJ", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+        .catch(error => {
+            console.error("Fetch-Error: " + error);
+            showErrorMessage(error);
+        });
+        if (!response.ok) {
+            // in case of malformed form data
+            console.error("Response-Error: Malformed form data" + response.json);
+            showErrorMessage("Fehlerhafte Formulardaten");
+        } else {
+            // in case of success
+            console.log("Success: " + response.json);
+            showSuccessMessage();
+            event.target.reset();
+        }
+    } catch (error) {
+        // in case of form-to-email server not responding
+        console.error("FormToEmail-Error: " + error);
+        showErrorMessage(error);
+    }
+  }
