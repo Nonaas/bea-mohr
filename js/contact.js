@@ -42,14 +42,25 @@ function showErrorMessage(error) {
     Swal.fire({
         customClass: {
             confirmButton: 'confirm-button-class',
+            cancelButton: 'cancel-button-class',
         },
         confirmButtonText: "Erneut versuchen",
         showCancelButton: true,
         cancelButtonText: "Zurück",
+        reverseButtons: true,
         icon: "error",
         title: "Oops...",
-        text: "Etwas ist schief gelaufen :-(\r\n("+error+")\r\n\r\nBitte versuchen sie es erneut.",
-        footer: '<i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:kontakt@bea-mohr.de" target="_blank">Stattdessen eine Email schreiben?</a>'
+        html: "<p>Etwas ist schief gelaufen &#128531;</p>"+
+              "<p>(<i>"+error+"</i>)</p><br/>"+
+              "<p>Bitte versuchen sie es erneut.</p>",
+        footer: '<i class="fa fa-envelope" aria-hidden="true"> </i><a href="mailto:kontakt@bea-mohr.de" target="_blank"> Stattdessen eine Email schreiben?</a>'
+    }).then((result) => {
+        if (result.isDismissed) {
+            var form = document.getElementById("contact-form");
+            form.reset();
+        } else if (result.isConfirmed) {
+            console.log("Try again selected.");
+        }
     });
 }
 
