@@ -53,7 +53,7 @@ function showErrorMessage(error) {
         html: "<p>Etwas ist schief gelaufen &#128531;</p>"+
               "<p>(<i>"+error+"</i>)</p><br/>"+
               "<p>Bitte versuchen sie es erneut.</p>",
-        footer: '<i class="fa fa-envelope" aria-hidden="true"> </i><a href="mailto:kontakt@bea-mohr.de" target="_blank"> Stattdessen eine Email schreiben?</a>'
+        footer: '<i class="fa fa-envelope" aria-hidden="true"> </i><a href="mailto:kontakt@mut-und-wandel.de" target="_blank"> Stattdessen eine Email schreiben?</a>'
     }).then((result) => {
         if (result.isDismissed) {
             var form = document.getElementById("contact-form");
@@ -71,7 +71,7 @@ async function submitForm(event) {
 
     try {
         const response = 
-        await fetch("https://www.form-to-email.com/api/s/3dYkLBl8TpIJ", {
+        await fetch("https://www.form-to-email.com/api/s/hUmfbrTvCpqp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
