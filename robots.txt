@@ -12,9 +12,5 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Block other bots
-User-agent: *
-Disallow: /
-
 # Sitemap location
 Sitemap: https://mut-und-wandel.de/sitemap.xml
