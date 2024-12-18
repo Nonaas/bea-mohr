@@ -1,16 +1,20 @@
+# Welcome to mut-und-wandel.de's robots.txt!
+
+# Allow Google bot
 User-agent: Googlebot
 Allow: /
-
+    
+# Allow Bing bot
 User-agent: Bingbot
 Allow: /
 
+# Allow DuckDuckGo bot
 User-agent: DuckDuckBot
 Allow: /
 
-# User-agent: *
-# Disallow: /
+# Block other bots
+User-agent: *
+Disallow: /
 
+# Sitemap location
 Sitemap: https://mut-und-wandel.de/sitemap.xml
-
-# User-agent: *
-# Crawl-delay: 10
