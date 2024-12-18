@@ -208,7 +208,8 @@ a:focus {
 
 a:hover,
 a:focus {
-  color: initial;
+  color: #003c7c;
+  text-decoration: underline;
 }
 
 .btn,
@@ -848,7 +849,9 @@ a:focus {
 }
 
 .info_section .contact_nav a:hover {
-  color: #f89646;
+  color: #373737;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .info_section .info_top {
